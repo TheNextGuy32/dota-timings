@@ -64,22 +64,10 @@ const Timer = () => {
     setHoverTime(null);
   };
 
-  // Check for phase changes and play sound
+  // Track phase changes (without sound)
   useEffect(() => {
-    if (previousPhaseRef.current !== null && 
-        previousPhaseRef.current !== currentPhase && 
-        currentPhase !== null &&
-        running) {
-      // Phase changed, play sound
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0; // Reset to beginning
-        audioRef.current.play().catch(error => {
-          console.log('Audio play failed:', error);
-        });
-      }
-    }
     previousPhaseRef.current = currentPhase;
-  }, [currentPhase, running]);
+  }, [currentPhase]);
 
   // Check for timing events and play sounds
   useEffect(() => {
