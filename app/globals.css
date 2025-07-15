@@ -1,0 +1,294 @@
+/* :root {
+  --color-text-primary: hsl(0, 0%, 81%);
+  --color-text-soft: hsl(0, 1%, 50%);
+  --color-link: hsl(233, 35%, 60%);
+  --color-link-hover: hsl(233, 38%, 71%);
+  --color-background-primary: #282c34;
+  --color-background-dark: hsl(220, 13%, 18%);
+  --color-background-darker: hsl(220, 13%, 17%);
+  --color-background-input: hsl(220, 13%, 13%);
+  --color-background-card: hsl(220, 13%, 20%);
+  --color-border: hsl(220, 13%, 30%);
+  --color-scrollbar-track: hsl(222, 12%, 26%);
+  --color-scrollbar-thumb: hsl(222, 13%, 30%);
+  --color-primary: #404883;
+  --color-primary-light: #8990c4;
+  --color-primary-lighter: #989fd1;
+  --color-primary-dark: #50599a;
+}
+.light-text {
+  color: var(--color-text-soft) !important;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root, .App, html, body, #app, #app>div {
+  height: 100%
+}
+a {
+  text-decoration: none !important;
+  cursor: default !important;
+  color: var(--color-link) !important;
+}
+a:hover {
+  text-decoration: underline !important;
+  cursor: pointer  !important;
+  color: var(--color-link-hover) !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App {
+  text-align: center; 
+  padding: 0 !important;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary) !important;
+}
+html {
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+  background-color: var(--color-background-dark);
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 8px;
+  background-color: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 5px;
+}
+#root, .App, html, body, #app, #app>div {
+  height: 100%;
+  overflow-x: hidden;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.full-on-container-boyo {
+  width:100%;
+  padding-left:0px;
+  padding-right:0px;
+}
+.input-group > .input-group-text {
+  background-color: var(--color-background-input);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+.input-group > input {
+  background-color: var(--color-background-input);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+.input-group > input:focus {
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-color: var(--color-border);
+  background-color: var(--color-background-input);
+  color: var(--color-text-primary);
+}
+.landing {
+  height:100%;
+  width:100% !important;
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--color-background-dark);
+}
+
+.cart-splash { 
+  height: 100%;
+}
+
+.checkout-splash-row {
+  height: 100%;
+}
+
+.firstDiv {
+  padding-top: 3em;
+}
+
+.cart {
+  padding-top:4em;
+  margin-left:auto;
+  margin-right:auto;
+  min-height: 46em;
+}
+
+.cart-header {
+  text-align: left;
+}
+
+.checkout-button{
+  margin-left:auto;
+  margin-top:1em;
+}
+
+.footer, .company-info {
+  background-color: var(--color-background-darker);
+}
+.no-left-border {
+  border-left: none !important;
+}
+.no-right-border {
+  border-right: none !important;
+}
+.soft-label {
+  color: var(--color-text-soft) !important;
+}
+
+.main-content-row {
+  min-height: calc(100vh - 300px);
+}
+
+.main-content-row + .firstDiv {
+  padding-top: 6em;
+}
+
+.App .download-templative-now-button, .App .discord-button {
+  height: 38px;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.App .download-templative-now-button:hover, .App .discord-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.App .download-templative-now-button {
+  background-image: linear-gradient(var(--color-primary-light), var(--color-primary)) !important;
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  border-radius: 24px !important;
+  font-weight: bold;
+  margin-bottom: 1em;
+  /* horizontal-offset vertical-offset blur spread color */
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .App .download-templative-now-button {
+    width: 100%;
+  }
+}
+
+.App .download-templative-now-button:hover {
+  transform: translateY(-1px);
+  background-image: linear-gradient(var(--color-primary-lighter), var(--color-primary-dark)) !important;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.App .discord-button {
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-background-primary) !important;
+  border-radius: 30px !important;
+  text-decoration: none !important;
+}
+.App .discord-button:hover {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  text-decoration: none !important;
+}
+.App .card {
+  text-align: left;
+  background-color: var(--color-background-card);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  margin: 0 1em 1em 1em;
+}
+.App .card-body {
+  padding: 2em;
+}
+
+
+.App .form-check-input:checked {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light );
+}
+
+.App .form-check-input:focus {
+  border-color: var(--color-primary-light) !important;
+  box-shadow: 0 0 0 0.25rem rgba(64, 72, 131, 0.25);
+}
+
+.App .btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+.App .btn-primary:hover {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+}
+.App .btn-primary:focus, .App .btn-primary:active {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+  box-shadow: 0 0 0 0.25rem rgba(64, 72, 131, 0.25) !important;
+}
+.App .btn-primary:disabled, .App .btn-primary.disabled {
+  background-color: var(--color-primary-lighter) !important;
+  border-color: var(--color-primary-lighter) !important;
+  opacity: 0.65;
+}
+
+.App .btn-outline-primary {
+  color: var(--color-primary-light) !important;
+  border-color: var(--color-primary-light) !important;
+  background-color: transparent !important;
+}
+.App .btn-outline-primary:hover {
+  color: var(--color-background-primary) !important;
+  background-color: var(--color-primary-lighter) !important;
+  border-color: var(--color-primary-lighter) !important;
+}
+.App .btn-outline-primary:focus, .App .btn-outline-primary:active {
+  color: var(--color-background-primary) !important;
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(64, 72, 131, 0.25) !important;
+}
+.App .btn-outline-primary:disabled, .App .btn-outline-primary.disabled {
+  color: var(--color-text-soft) !important;
+  border-color: var(--color-text-soft) !important;
+  background-color: transparent !important;
+  opacity: 0.65;
+} */

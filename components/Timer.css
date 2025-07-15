@@ -1,0 +1,108 @@
+.timer-container {
+  display: inline-block;
+  padding: 1rem;
+  background: var(--color-background-card);
+  border-radius: 8px;
+}
+
+.timer-display {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+}
+
+.timer-phase {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  text-align: center;
+  padding: 0.5rem;
+  background: var(--color-background-input);
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+.timer-progress {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.timer-progress-bar {
+  background: linear-gradient(90deg, #28a745, #ffc107, #dc3545);
+  transition: width 0.3s ease;
+}
+
+.timer-controls {
+  margin-bottom: 1rem;
+}
+
+.upcoming-timings {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.upcoming-timings h5 {
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.timing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.timing-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-radius: 4px;
+  background: var(--color-background-input);
+  border: 1px solid var(--color-border);
+  gap: 0.5rem;
+}
+
+.timing-item.passed {
+  opacity: 0.6;
+  background: var(--color-background-darker);
+}
+
+.timing-item.upcoming {
+  background: var(--color-background-input);
+  border-color: var(--color-primary);
+}
+
+.timing-item i:first-child {
+  color: var(--color-primary-light);
+  width: 16px;
+  text-align: center;
+}
+
+.timing-name {
+  flex: 1;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.timing-time {
+  color: var(--color-text-soft);
+  font-family: monospace;
+  font-size: 0.9rem;
+  min-width: 60px;
+  text-align: right;
+}
+
+.timing-item.passed .timing-name,
+.timing-item.passed .timing-time {
+  text-decoration: line-through;
+  color: var(--color-text-soft);
+}
+
+.timing-item .bi-check-circle-fill {
+  color: #28a745;
+  margin-left: 0.5rem;
+}

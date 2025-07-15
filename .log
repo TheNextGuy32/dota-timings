@@ -1,0 +1,903 @@
+2025-06-08T18:09:56.803393+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=eadf3caa-de0e-98e9-1df5-8b83cf25c10d fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.191.93" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:56.559193+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:56.559217+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:56.559221+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:56.559221+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:56.559485+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:56.559553+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:56.559554+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:56.559554+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.559556+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:56.559556+00:00 app[web.1]:
+2025-06-08T18:09:56.559557+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:56.559557+00:00 app[web.1]:
+2025-06-08T18:09:56.559558+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:56.559666+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:56.559666+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:56.559666+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.559668+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:56.559668+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:56.559668+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.559674+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:56.559674+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:56.559674+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.559682+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:56.559683+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:56.559683+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.559683+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:56.559683+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:56.559694+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:56.559703+00:00 app[web.1]:
+2025-06-08T18:09:56.559703+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:56.559703+00:00 app[web.1]:
+2025-06-08T18:09:56.559703+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:56.559746+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:56.559746+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:56.559746+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.559747+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:56.559747+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:56.559757+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:56.561245+00:00 app[web.1]: 10.1.26.242 - - [08/Jun/2025:18:09:56 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:56.801242+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:56.801244+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:56.801248+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:56.801248+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:56.801530+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:56.801589+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:56.801589+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:56.801589+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.801598+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:56.801609+00:00 app[web.1]:
+2025-06-08T18:09:56.801609+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:56.801610+00:00 app[web.1]:
+2025-06-08T18:09:56.801611+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:56.801776+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:56.801776+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:56.801777+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.801777+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:56.801778+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:56.801778+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.801780+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:56.801780+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:56.801781+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.801781+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:56.801781+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:56.801782+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.801782+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:56.801782+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:56.801784+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:56.801795+00:00 app[web.1]:
+2025-06-08T18:09:56.801795+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:56.801795+00:00 app[web.1]:
+2025-06-08T18:09:56.801796+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:56.801845+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:56.801845+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:56.801845+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:56.801846+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:56.801846+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:56.801856+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:56.803433+00:00 app[web.1]: 10.1.52.157 - - [08/Jun/2025:18:09:56 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:57.011133+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=2309ad83-df69-02dd-1684-587e28566f63 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 104.23.209.51" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:57.258875+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=1a0c070b-550c-f826-c0f2-df12bdd51369 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.190.205" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:57.008798+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:57.008815+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:57.008831+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:57.008831+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:57.009093+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.009157+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:57.009157+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:57.009157+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.009167+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:57.009179+00:00 app[web.1]:
+2025-06-08T18:09:57.009179+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:57.009179+00:00 app[web.1]:
+2025-06-08T18:09:57.009180+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.009288+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:57.009288+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:57.009288+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.009290+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:57.009290+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:57.009290+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.009299+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:57.009299+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:57.009299+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.009299+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:57.009300+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:57.009300+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.009304+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:57.009304+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:57.009314+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:57.009318+00:00 app[web.1]:
+2025-06-08T18:09:57.009318+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:57.009318+00:00 app[web.1]:
+2025-06-08T18:09:57.009326+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.009367+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:57.009367+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:57.009367+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.009368+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:57.009369+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:57.009379+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:57.010916+00:00 app[web.1]: 10.1.60.123 - - [08/Jun/2025:18:09:57 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:57.256687+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:57.256689+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:57.256693+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:57.256693+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:57.256972+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.257032+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:57.257036+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:57.257036+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.257037+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:57.257051+00:00 app[web.1]:
+2025-06-08T18:09:57.257052+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:57.257052+00:00 app[web.1]:
+2025-06-08T18:09:57.257052+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.257167+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:57.257167+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:57.257167+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.257168+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:57.257168+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:57.257168+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.257178+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:57.257178+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:57.257178+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.257179+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:57.257179+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:57.257179+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.257187+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:57.257188+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:57.257196+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:57.257199+00:00 app[web.1]:
+2025-06-08T18:09:57.257199+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:57.257199+00:00 app[web.1]:
+2025-06-08T18:09:57.257208+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.257249+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:57.257250+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:57.257250+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.257250+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:57.257250+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:57.257261+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:57.258823+00:00 app[web.1]: 10.1.60.123 - - [08/Jun/2025:18:09:57 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:57.535944+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=af00fd32-0497-b514-fecb-d3ab7db6aa40 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 104.23.209.51" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:57.533769+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:57.533794+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:57.533797+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:57.533797+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:57.534061+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.534125+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:57.534125+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:57.534126+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.534135+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:57.534146+00:00 app[web.1]:
+2025-06-08T18:09:57.534146+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:57.534147+00:00 app[web.1]:
+2025-06-08T18:09:57.534147+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.534253+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:57.534254+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:57.534254+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.534255+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:57.534255+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:57.534256+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.534259+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:57.534259+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:57.534259+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.534263+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:57.534263+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:57.534263+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.534271+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:57.534271+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:57.534274+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:57.534285+00:00 app[web.1]:
+2025-06-08T18:09:57.534285+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:57.534285+00:00 app[web.1]:
+2025-06-08T18:09:57.534286+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.534327+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:57.534327+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:57.534328+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.534329+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:57.534329+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:57.534339+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:57.535855+00:00 app[web.1]: 10.1.60.123 - - [08/Jun/2025:18:09:57 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:57.840321+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=98953665-ac11-fbaa-f536-ab8103bb575a fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.70.174.184" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:58.087468+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=3d30aa0b-9263-8b5d-8e9c-28af6c994f81 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.31.80" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:57.838135+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:57.838149+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:57.838153+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:57.838153+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:57.838479+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.838561+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:57.838561+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:57.838562+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.838573+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:57.838587+00:00 app[web.1]:
+2025-06-08T18:09:57.838588+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:57.838588+00:00 app[web.1]:
+2025-06-08T18:09:57.838589+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.838738+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:57.838738+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:57.838738+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.838747+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:57.838747+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:57.838747+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.838749+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:57.838749+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:57.838749+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.838760+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:57.838760+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:57.838761+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.838762+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:57.838762+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:57.838779+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:57.838790+00:00 app[web.1]:
+2025-06-08T18:09:57.838790+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:57.838791+00:00 app[web.1]:
+2025-06-08T18:09:57.838791+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:57.838833+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:57.838833+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:57.838834+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:57.838835+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:57.838835+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:57.838846+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:57.840360+00:00 app[web.1]: 10.1.47.61 - - [08/Jun/2025:18:09:57 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:58.085253+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:58.085254+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:58.085260+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:58.085260+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:58.085551+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.085613+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:58.085613+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:58.085613+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.085624+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:58.085635+00:00 app[web.1]:
+2025-06-08T18:09:58.085635+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:58.085635+00:00 app[web.1]:
+2025-06-08T18:09:58.085635+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.085746+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:58.085747+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:58.085747+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.085748+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:58.085748+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:58.085749+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.085758+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:58.085758+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:58.085758+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.085758+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:58.085758+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:58.085758+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.085767+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:58.085767+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:58.085775+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:58.085783+00:00 app[web.1]:
+2025-06-08T18:09:58.085784+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:58.085784+00:00 app[web.1]:
+2025-06-08T18:09:58.085784+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.085828+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:58.085828+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:58.085828+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.085829+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:58.085829+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:58.085840+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:58.087423+00:00 app[web.1]: 10.1.58.123 - - [08/Jun/2025:18:09:58 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:58.343106+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=5115e60c-3d01-df47-95ee-ba4c8529a9f6 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 104.23.209.116" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:58.340931+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:58.340961+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:58.340964+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:58.340965+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:58.341223+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.341289+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:58.341289+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:58.341289+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.341299+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:58.341310+00:00 app[web.1]:
+2025-06-08T18:09:58.341311+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:58.341311+00:00 app[web.1]:
+2025-06-08T18:09:58.341311+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.341418+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:58.341418+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:58.341418+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.341419+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:58.341419+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:58.341419+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.341428+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:58.341428+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:58.341429+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.341429+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:58.341429+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:58.341429+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.341432+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:58.341433+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:58.341443+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:58.341446+00:00 app[web.1]:
+2025-06-08T18:09:58.341447+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:58.341447+00:00 app[web.1]:
+2025-06-08T18:09:58.341455+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.341496+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:58.341496+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:58.341496+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.341496+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:58.341496+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:58.341507+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:58.343046+00:00 app[web.1]: 10.1.23.102 - - [08/Jun/2025:18:09:58 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:58.601715+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=2c70a1c2-4dcd-6d2a-416d-101e8acbe293 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 104.23.209.51" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:58.599189+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:58.599200+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:58.599203+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:58.599204+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:58.599497+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.599895+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:58.599896+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:58.599896+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.599899+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:58.599914+00:00 app[web.1]:
+2025-06-08T18:09:58.599914+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:58.599914+00:00 app[web.1]:
+2025-06-08T18:09:58.599915+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.600056+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:58.600057+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:58.600057+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.600057+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:58.600057+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:58.600058+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.600060+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:58.600060+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:58.600060+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.600065+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:58.600065+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:58.600065+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.600067+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:58.600067+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:58.600080+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:58.600081+00:00 app[web.1]:
+2025-06-08T18:09:58.600082+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:58.600082+00:00 app[web.1]:
+2025-06-08T18:09:58.600092+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.600133+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:58.600133+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:58.600133+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.600133+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:58.600134+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:58.600144+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:58.601696+00:00 app[web.1]: 10.1.29.105 - - [08/Jun/2025:18:09:58 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:58.944448+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=f4b920e9-351a-4075-1dfa-25823e2dcb6b fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 162.158.79.190" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:58.942206+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:58.942239+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:58.942242+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:58.942243+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:58.942529+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.942596+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:58.942596+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:58.942598+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.942600+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:58.942616+00:00 app[web.1]:
+2025-06-08T18:09:58.942617+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:58.942618+00:00 app[web.1]:
+2025-06-08T18:09:58.942618+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.942716+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:58.942716+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:58.942716+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.942717+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:58.942718+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:58.942718+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.942726+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:58.942726+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:58.942727+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.942727+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:58.942727+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:58.942727+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.942731+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:58.942731+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:58.942742+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:58.942750+00:00 app[web.1]:
+2025-06-08T18:09:58.942750+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:58.942750+00:00 app[web.1]:
+2025-06-08T18:09:58.942750+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:58.942792+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:58.942792+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:58.942792+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:58.942793+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:58.942793+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:58.942803+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:58.944458+00:00 app[web.1]: 10.1.44.75 - - [08/Jun/2025:18:09:58 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:59.220741+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=472372c9-913a-789a-8342-10c9d563b236 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.69.7.197" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:59.460816+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=1ed536c2-a9fa-fc2b-432c-dbc95f23fa08 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 104.23.209.116" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:59.218433+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:59.218445+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:59.218447+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:59.218447+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:59.218762+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.218842+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:59.218842+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:59.218843+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.218848+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:59.218865+00:00 app[web.1]:
+2025-06-08T18:09:59.218866+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:59.218866+00:00 app[web.1]:
+2025-06-08T18:09:59.218867+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.219000+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:59.219000+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:59.219000+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.219002+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:59.219002+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:59.219002+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.219013+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:59.219013+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:59.219013+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.219015+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:59.219015+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:59.219015+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.219025+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:59.219025+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:59.219035+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:59.219036+00:00 app[web.1]:
+2025-06-08T18:09:59.219037+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:59.219037+00:00 app[web.1]:
+2025-06-08T18:09:59.219046+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.219089+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:59.219089+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:59.219089+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.219090+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:59.219090+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:59.219101+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:59.220669+00:00 app[web.1]: 10.1.26.242 - - [08/Jun/2025:18:09:59 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:59.458635+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:59.458637+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:59.458641+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:59.458641+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:59.458939+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.458989+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:59.458990+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:59.458990+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.459000+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:59.459012+00:00 app[web.1]:
+2025-06-08T18:09:59.459012+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:59.459012+00:00 app[web.1]:
+2025-06-08T18:09:59.459013+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.459119+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:59.459119+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:59.459120+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.459121+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:59.459121+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:59.459121+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.459130+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:59.459130+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:59.459130+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.459130+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:59.459130+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:59.459131+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.459139+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:59.459139+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:59.459142+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:59.459152+00:00 app[web.1]:
+2025-06-08T18:09:59.459152+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:59.459153+00:00 app[web.1]:
+2025-06-08T18:09:59.459153+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.459197+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:59.459197+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:59.459197+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.459197+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:59.459197+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:59.459208+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:59.460699+00:00 app[web.1]: 10.1.29.105 - - [08/Jun/2025:18:09:59 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:59.739349+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=0a13b714-a3fc-2f99-fee8-637acc86562a fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 162.158.78.81" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:59.737342+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:59.737370+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:59.737373+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:59.737373+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:59.737631+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.737692+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:59.737692+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:59.737693+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.737702+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:59.737713+00:00 app[web.1]:
+2025-06-08T18:09:59.737713+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:59.737713+00:00 app[web.1]:
+2025-06-08T18:09:59.737713+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.737819+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:59.737819+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:59.737819+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.737820+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:59.737821+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:59.737821+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.737830+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:59.737831+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:59.737831+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.737839+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:59.737840+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:59.737840+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.737841+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:59.737842+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:59.737856+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:59.737866+00:00 app[web.1]:
+2025-06-08T18:09:59.737866+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:59.737867+00:00 app[web.1]:
+2025-06-08T18:09:59.737868+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.737919+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:59.737920+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:59.737920+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.737921+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:59.737921+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:59.737932+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:59.739494+00:00 app[web.1]: 10.1.52.157 - - [08/Jun/2025:18:09:59 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:09:59.991704+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=7b74f5b8-3cc6-4e73-c696-deb75d8beb18 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.195.121" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:09:59.989504+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:09:59.989513+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:09:59.989516+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:09:59.989516+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:09:59.989828+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.989894+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:09:59.989894+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:09:59.989894+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.989904+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:09:59.989915+00:00 app[web.1]:
+2025-06-08T18:09:59.989916+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:09:59.989916+00:00 app[web.1]:
+2025-06-08T18:09:59.989916+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.990025+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:09:59.990026+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:09:59.990026+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.990026+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:09:59.990027+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:09:59.990027+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.990032+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:09:59.990032+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:09:59.990032+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.990032+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:09:59.990033+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:09:59.990033+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.990034+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:09:59.990034+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:09:59.990052+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:09:59.990052+00:00 app[web.1]:
+2025-06-08T18:09:59.990052+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:09:59.990052+00:00 app[web.1]:
+2025-06-08T18:09:59.990052+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:09:59.990092+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:09:59.990092+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:09:59.990093+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:09:59.990093+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:09:59.990093+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:09:59.990103+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:09:59.991677+00:00 app[web.1]: 10.1.25.92 - - [08/Jun/2025:18:09:59 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:00.294032+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=117ee8bf-836e-3997-7b2c-a268b80b2d47 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 162.158.79.181" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:10:00.292133+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:10:00.292147+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:00.292151+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:10:00.292151+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:10:00.292419+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.292486+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:10:00.292486+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:10:00.292486+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.292487+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:10:00.292501+00:00 app[web.1]:
+2025-06-08T18:10:00.292502+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:10:00.292502+00:00 app[web.1]:
+2025-06-08T18:10:00.292502+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.292618+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:10:00.292618+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:10:00.292618+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.292620+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:10:00.292620+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:10:00.292620+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.292624+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:10:00.292624+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:10:00.292624+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.292633+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:10:00.292633+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:10:00.292633+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.292633+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:10:00.292634+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:10:00.292644+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:10:00.292646+00:00 app[web.1]:
+2025-06-08T18:10:00.292646+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:10:00.292646+00:00 app[web.1]:
+2025-06-08T18:10:00.292656+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.292696+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:10:00.292696+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:10:00.292696+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.292697+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:10:00.292697+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:10:00.292707+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:10:00.294218+00:00 app[web.1]: 10.1.47.118 - - [08/Jun/2025:18:10:00 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:00.573043+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=752fa6d0-a49a-6445-243a-0bdc5df17f6c fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.194.91" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:10:00.570985+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:10:00.571011+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:00.571014+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:10:00.571014+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:10:00.571280+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.571347+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:10:00.571347+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:10:00.571347+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.571348+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:10:00.571361+00:00 app[web.1]:
+2025-06-08T18:10:00.571361+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:10:00.571361+00:00 app[web.1]:
+2025-06-08T18:10:00.571362+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.571469+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:10:00.571469+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:10:00.571469+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.571471+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:10:00.571471+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:10:00.571471+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.571480+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:10:00.571480+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:10:00.571480+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.571481+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:10:00.571482+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:10:00.571482+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.571485+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:10:00.571485+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:10:00.571496+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:10:00.571504+00:00 app[web.1]:
+2025-06-08T18:10:00.571504+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:10:00.571504+00:00 app[web.1]:
+2025-06-08T18:10:00.571505+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.571547+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:10:00.571547+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:10:00.571547+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.571548+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:10:00.571548+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:10:00.571562+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:10:00.573056+00:00 app[web.1]: 10.1.84.47 - - [08/Jun/2025:18:10:00 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:00.824663+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=aa9f6269-eaa3-a1d3-8c21-b03ffea2fe40 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.191.4" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:10:00.822437+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:10:00.822445+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:00.822450+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:10:00.822456+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:10:00.822733+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.822796+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:10:00.822797+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:10:00.822797+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.822806+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:10:00.822817+00:00 app[web.1]:
+2025-06-08T18:10:00.822817+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:10:00.822817+00:00 app[web.1]:
+2025-06-08T18:10:00.822818+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.822923+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:10:00.822923+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:10:00.822924+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.822925+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:10:00.822925+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:10:00.822925+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.822933+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:10:00.822934+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:10:00.822934+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.822935+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:10:00.822935+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:10:00.822935+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.822943+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:10:00.822943+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:10:00.822951+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:10:00.822959+00:00 app[web.1]:
+2025-06-08T18:10:00.822959+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:10:00.822959+00:00 app[web.1]:
+2025-06-08T18:10:00.822960+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:00.823003+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:10:00.823003+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:10:00.823003+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:00.823004+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:10:00.823004+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:10:00.823014+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:10:00.824639+00:00 app[web.1]: 10.1.86.238 - - [08/Jun/2025:18:10:00 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:01.104860+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=1c09a794-2103-3abf-cbd8-fd9284e74de5 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.190.205" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:10:01.102653+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:10:01.102657+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:01.102662+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:10:01.102664+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:10:01.102947+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.103009+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:10:01.103009+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:10:01.103009+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.103011+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:10:01.103026+00:00 app[web.1]:
+2025-06-08T18:10:01.103027+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:10:01.103027+00:00 app[web.1]:
+2025-06-08T18:10:01.103043+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.103168+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:10:01.103168+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:10:01.103169+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.103169+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:10:01.103169+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:10:01.103170+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.103172+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:10:01.103172+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:10:01.103172+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.103177+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:10:01.103178+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:10:01.103178+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.103179+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:10:01.103180+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:10:01.103192+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:10:01.103194+00:00 app[web.1]:
+2025-06-08T18:10:01.103194+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:10:01.103194+00:00 app[web.1]:
+2025-06-08T18:10:01.103199+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.103242+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:10:01.103242+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:10:01.103243+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.103243+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:10:01.103243+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:10:01.103248+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:10:01.104912+00:00 app[web.1]: 10.1.44.75 - - [08/Jun/2025:18:10:01 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:01.470838+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=4b9f78e4-175c-594d-6a95-88cee04a19f1 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.68.244.137" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:10:01.468680+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:10:01.468703+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:01.468705+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:10:01.468705+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:10:01.468964+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.469027+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:10:01.469028+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:10:01.469028+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.469037+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:10:01.469048+00:00 app[web.1]:
+2025-06-08T18:10:01.469049+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:10:01.469049+00:00 app[web.1]:
+2025-06-08T18:10:01.469050+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.469163+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:10:01.469163+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:10:01.469163+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.469164+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:10:01.469164+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:10:01.469164+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.469173+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:10:01.469173+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:10:01.469174+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.469174+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:10:01.469174+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:10:01.469174+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.469178+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:10:01.469178+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:10:01.469188+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:10:01.469197+00:00 app[web.1]:
+2025-06-08T18:10:01.469197+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:10:01.469197+00:00 app[web.1]:
+2025-06-08T18:10:01.469197+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.469240+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:10:01.469241+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:10:01.469241+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.469241+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:10:01.469241+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:10:01.469252+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:10:01.470882+00:00 app[web.1]: 10.1.44.183 - - [08/Jun/2025:18:10:01 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:01.789747+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=49378341-4e4a-49b9-18c2-76fbec8811e1 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.191.91" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:10:01.787712+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:10:01.787730+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:01.787741+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:10:01.787741+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:10:01.787997+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.788060+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:10:01.788061+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:10:01.788061+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.788070+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:10:01.788081+00:00 app[web.1]:
+2025-06-08T18:10:01.788081+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:10:01.788082+00:00 app[web.1]:
+2025-06-08T18:10:01.788082+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.788185+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:10:01.788186+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:10:01.788186+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.788187+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:10:01.788187+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:10:01.788187+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.788196+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:10:01.788196+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:10:01.788196+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.788196+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:10:01.788197+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:10:01.788197+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.788205+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:10:01.788205+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:10:01.788213+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:10:01.788215+00:00 app[web.1]:
+2025-06-08T18:10:01.788215+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:10:01.788215+00:00 app[web.1]:
+2025-06-08T18:10:01.788225+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:01.788264+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:10:01.788264+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:10:01.788265+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:01.788266+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:10:01.788266+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:10:01.788276+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:10:01.789729+00:00 app[web.1]: 10.1.86.238 - - [08/Jun/2025:18:10:01 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:02.062984+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=a1538a45-e4f2-6b08-4332-80d3a275ed5b fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 104.23.209.51" dyno=web.1 connect=0ms service=3ms status=401 bytes=41 protocol=http1.1 tls=false
+2025-06-08T18:10:02.060406+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): undefined...
+2025-06-08T18:10:02.060428+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:02.060429+00:00 app[web.1]: DEBUG: Token validation error details: Invalid token
+2025-06-08T18:10:02.060440+00:00 app[web.1]: DEBUG: Token validation error type: <class 'Exception'>
+2025-06-08T18:10:02.060831+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:02.060921+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 269, in _load
+2025-06-08T18:10:02.060921+00:00 app[web.1]: signing_input, crypto_segment = jwt.rsplit(b".", 1)
+2025-06-08T18:10:02.060921+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:02.060935+00:00 app[web.1]: ValueError: not enough values to unpack (expected 2, got 1)
+2025-06-08T18:10:02.060950+00:00 app[web.1]:
+2025-06-08T18:10:02.060951+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2025-06-08T18:10:02.060951+00:00 app[web.1]:
+2025-06-08T18:10:02.060953+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:02.061112+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 54, in decode_token
+2025-06-08T18:10:02.061112+00:00 app[web.1]: return jwt.decode(token, TOKEN_SECRET_KEY, algorithms=["HS256"])
+2025-06-08T18:10:02.061113+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:02.061114+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 222, in decode
+2025-06-08T18:10:02.061114+00:00 app[web.1]: decoded = self.decode_complete(
+2025-06-08T18:10:02.061115+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:02.061127+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jwt.py", line 156, in decode_complete       
+2025-06-08T18:10:02.061127+00:00 app[web.1]: decoded = api_jws.decode_complete(
+2025-06-08T18:10:02.061127+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:02.061136+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 209, in decode_complete       
+2025-06-08T18:10:02.061136+00:00 app[web.1]: payload, signing_input, header, signature = self._load(jwt)
+2025-06-08T18:10:02.061136+00:00 app[web.1]: ^^^^^^^^^^^^^^^
+2025-06-08T18:10:02.061137+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.11/site-packages/jwt/api_jws.py", line 272, in _load
+2025-06-08T18:10:02.061137+00:00 app[web.1]: raise DecodeError("Not enough segments") from err
+2025-06-08T18:10:02.061153+00:00 app[web.1]: jwt.exceptions.DecodeError: Not enough segments
+2025-06-08T18:10:02.061164+00:00 app[web.1]:
+2025-06-08T18:10:02.061164+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-06-08T18:10:02.061164+00:00 app[web.1]:
+2025-06-08T18:10:02.061172+00:00 app[web.1]: Traceback (most recent call last):
+2025-06-08T18:10:02.061235+00:00 app[web.1]: File "/app/backend/simulator/simulatorController.py", line 29, in validate_auth_token
+2025-06-08T18:10:02.061235+00:00 app[web.1]: decoded_token = passwordManagement.decode_token(token)
+2025-06-08T18:10:02.061235+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-08T18:10:02.061244+00:00 app[web.1]: File "/app/backend/login/passwordManagement.py", line 58, in decode_token
+2025-06-08T18:10:02.061244+00:00 app[web.1]: raise Exception("Invalid token")
+2025-06-08T18:10:02.061255+00:00 app[web.1]: Exception: Invalid token
+2025-06-08T18:10:02.063084+00:00 app[web.1]: 10.1.44.240 - - [08/Jun/2025:18:10:02 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 401 41 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:03.458090+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:03.458121+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:03.458186+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:03.458188+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:03.525010+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:03.838949+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=1a23ea2b-d36d-a8fb-3fea-29c4022ec33e fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 162.158.79.215" dyno=web.1 connect=0ms service=382ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:03.836903+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/be89aa5693260813240a85d00e35258d.png
+2025-06-08T18:10:03.838988+00:00 app[web.1]: 10.1.52.157 - - [08/Jun/2025:18:10:03 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:04.349894+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=46e1b033-bac0-3d0f-7e5f-c70649881872 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.191.118" dyno=web.1 connect=0ms service=212ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:04.138229+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:04.138258+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:04.138313+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:04.138313+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:04.205784+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:04.347846+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/27449996c6b6ab4a6eb63ed6f4641179.png
+2025-06-08T18:10:04.349832+00:00 app[web.1]: 10.1.23.255 - - [08/Jun/2025:18:10:04 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:06.265180+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=7706d9bb-7522-d176-d8a2-b7f4db050380 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.195.40" dyno=web.1 connect=0ms service=213ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:06.052969+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:06.052971+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:06.053060+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:06.053060+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:06.119347+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:06.263148+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/4924330fbcb61d37d3b875dcc15ea3e1.png
+2025-06-08T18:10:06.265164+00:00 app[web.1]: 10.1.60.123 - - [08/Jun/2025:18:10:06 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:06.533502+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:06.533533+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:06.533598+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:06.533599+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:06.599673+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:06.906551+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=25b95960-c3f1-be45-6f33-9c2a2706150a fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.191.91" dyno=web.1 connect=0ms service=374ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:06.904468+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/27449996c6b6ab4a6eb63ed6f4641179.png
+2025-06-08T18:10:06.906435+00:00 app[web.1]: 10.1.26.242 - - [08/Jun/2025:18:10:06 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:08.762940+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=2bd90469-aadc-35e5-6ad1-c80fd8acc975 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 162.158.78.134" dyno=web.1 connect=0ms service=212ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:08.551824+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:08.551838+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:08.551910+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:08.551911+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:08.618353+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:08.760691+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/75bcd5fc0bfa237306588964ae3dddc4.png
+2025-06-08T18:10:08.762702+00:00 app[web.1]: 10.1.60.123 - - [08/Jun/2025:18:10:08 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:09.241027+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=df559a90-998f-5f20-9172-8277acbfbff8 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 104.23.209.185" dyno=web.1 connect=0ms service=208ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:09.033339+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:09.033351+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:09.033431+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:09.033433+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:09.100357+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:09.239034+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/27449996c6b6ab4a6eb63ed6f4641179.png
+2025-06-08T18:10:09.241007+00:00 app[web.1]: 10.1.25.92 - - [08/Jun/2025:18:10:09 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:10.263817+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=4ac220b7-98fb-0faa-5885-64c762bf92af fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 162.158.78.131" dyno=web.1 connect=0ms service=207ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:10.057674+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:10.057710+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:10.057781+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:10.057781+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:10.124011+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:10.261821+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/fd53cbe5c93170c76b578585a08feb05.png
+2025-06-08T18:10:10.263948+00:00 app[web.1]: 10.1.47.61 - - [08/Jun/2025:18:10:10 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+2025-06-08T18:10:10.718638+00:00 heroku[router]: at=info method=POST path="//simulator/image/presigned-url" host=api.templative.net request_id=daec563d-a58a-ad3b-1143-2d800a0860c4 fwd="2600:6c40:5800:167c:c1e3:bb38:7c60:3235, 172.71.191.21" dyno=web.1 connect=0ms service=208ms status=200 bytes=114 protocol=http1.1 tls=false
+2025-06-08T18:10:10.511424+00:00 app[web.1]: DEBUG: Extracted token (first 20 chars): eyJhbGciOiJIUzI1NiIs...
+2025-06-08T18:10:10.511458+00:00 app[web.1]: DEBUG: Attempting to decode token...
+2025-06-08T18:10:10.511544+00:00 app[web.1]: DEBUG: Token decoded successfully: {'userGuid': 'ac10e569-430f-4721-bc49-e2fd6dbea812', 'exp': 1750010929, 'iat': 1749406129}
+2025-06-08T18:10:10.511545+00:00 app[web.1]: DEBUG: Looking up user with GUID: ac10e569-430f-4721-bc49-e2fd6dbea812
+2025-06-08T18:10:10.578233+00:00 app[web.1]: DEBUG: User found: plogan91920@gmail.com
+2025-06-08T18:10:10.716561+00:00 app[web.1]: Image already exists: https://templative-simulator-images.s3.amazonaws.com/27449996c6b6ab4a6eb63ed6f4641179.png
+2025-06-08T18:10:10.718596+00:00 app[web.1]: 10.1.27.88 - - [08/Jun/2025:18:10:10 +0000] "POST //simulator/image/presigned-url HTTP/1.1" 200 114 "-" "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"

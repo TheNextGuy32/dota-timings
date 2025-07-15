@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://www.templative.net/icon.ico</loc><lastmod>2025-06-11T00:48:20.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>https://www.templative.net/en</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>https://www.templative.net/it</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>https://www.templative.net/en/blog</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/blog</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/docs</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/docs</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/about</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/about</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/pricing</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/pricing</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/download</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/download</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/profile</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/profile</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/login</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/login</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/register</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/register</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/waitlist</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/waitlist</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/terms</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/terms</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/privacy</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/privacy</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/en/thanks</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.templative.net/it/thanks</loc><lastmod>2025-06-11T00:48:20.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

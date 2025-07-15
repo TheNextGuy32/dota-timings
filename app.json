@@ -1,0 +1,19 @@
+{
+    "name": "Templative Storefront",
+    "description": "The Templative Storefront built with Next.js",
+    "repository": "https://github.com/nextdaygames/storefront",
+    "keywords": ["node", "next", "react"],
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "stack": "heroku-22",
+    "env": {
+        "NODE_ENV": {
+            "description": "Environment for Node.js application",
+            "value": "production"
+        }
+    }
+}
